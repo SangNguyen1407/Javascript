@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	var myArray = new Array();
+	var enter = "<br \>"
+	
+	var arr = ["HTML", "CSS", "JavaScript", "HTML", 1, 2];
+	var arr_0 = [1, "C++"];
+	
+	var result = new Array();
+	result = arr.concat(arr_0);
+	
+	for (x in result){
+		document.write("result[0] : " + result[x] + enter);
+	}
+	
+	document.write("indexOf: " + arr.indexOf("HTML", 1) + enter);
+	var a = arr.pop();
+	document.write("pop: " + a + enter);
+	document.write("pop: " + arr + enter);
+	document.write("sort: " + arr.sort() + enter);
+	document.write("splice: " + arr.splice(2, 0, "C", "C#") + enter);
+	document.write("pop: " + arr + enter);
+	
+	var new_arr = new Array();
+	for (x in arr) {
+		if (new_arr.indexOf(arr[x]) <0){
+			new_arr.push(arr[x]);
+		}
+	}
+	document.write("new_arr: " + new_arr + enter);
+	
+
+	var student = {"first_name": "Marry", "last_name": "Nguyen", "brithday":"1989/07/14"};
+	document.write("first_name: " + student["first_name"] + enter);
+	
+	var str = new String("Jquery Master");
+	document.write("str_constructor: " + str.constructor + enter);
+	document.write("str: " + str + enter);
+	
+	/* get substring in string
+	 */
+	document.write("str1: " + str.substr(7) + enter);
+	document.write("str1: " + str.substr(-6, 3) + enter);
+	document.write("str2: " + str.slice(7,9) + enter);
+	document.write("str3: " + str.slice(-13, -1) + enter);
+	
+	
+</script>
+
+</head>
+<body>
+</body>
+</html> 

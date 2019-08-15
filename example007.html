@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+	// remove white-space
+	var str = "         javascript           is         very easy           ";
+	var enter = "<br \>";
+	
+	document.write('string:"' + str + '"' + enter);
+	document.write('length:' + str.length + enter);
+	
+	function leftTrim(str){
+		str = str.replace(/^\s+/img, "");
+		return str;
+	}
+
+	function rightTrim(str){
+		str = str.replace(/\s+$/img, "");
+		return str;
+	}
+
+	function midTrim(str){
+		str = str.replace(/\s+/img, " ");
+		return str;
+	}
+	
+	str = leftTrim(str);
+	document.write('string:' + str + enter);
+	document.write('length:' + str.length + enter);
+	
+	str = rightTrim(str);
+	document.write('string:' + str + enter);
+	document.write('length:' + str.length + enter);
+
+	str = midTrim(str);
+	document.write('string:' + str + enter);
+	document.write('length:' + str.length + enter);	
+</script>
+</script>
+</head>
+<body>
+
+</body>
+</html> 

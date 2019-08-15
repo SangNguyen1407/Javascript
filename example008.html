@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	var enter = "<br \>"
+	
+	this.myValidate = function(){
+		this.msg = "this is a test";
+		this.getmsg = getmsg;
+		
+		function getmsg(){
+			return this.msg;
+		}
+	}
+	
+	var myObj = new myValidate();
+	document.write("method: " + myObj.getmsg() + enter);
+
+	
+	
+</script>
+
+</head>
+<body>
+</body>
+</html> 

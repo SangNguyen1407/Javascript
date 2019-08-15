@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta htpp-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>example09</title>
+<script type="text/javascript">
+	var enter = "<br \>"
+	
+	this.myBox = function(){
+		this.text = "";
+		this.altribute = "";
+		
+		this.createBox = createBox;
+		
+		function createBox(altr, text){
+			var result;
+			var style = "margin-top:20px;line-height:100px;text-align:center;";
+			
+			style += "width:" + altr[0] + ";";
+			style += "height:" + altr[1] + ";";
+			style += "background:" + altr[2] + ";";
+			style += "color:" + altr[3] + ";";
+			result = "<div style='" + style + "'/>" + text + "</div>";
+			
+			return result;
+		}
+	}
+
+	var box = new myBox();
+	document.write(box.createBox(["100px", "100px", "red", "yellow"], "box01"));
+	document.write(box.createBox(["100px", "100px", "blue", "black"], "box02"));
+	document.write(box.createBox(["100px", "100px", "green", "black"], "box02"));
+	
+</script>
+
+</head>
+<body>
+</body>
+</html> 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+//	var fullName = "Nguyen Le Van A";
+	var enter = "<br \>"
+	String.prototype.splitName = function(){
+		var firstname = this.indexOf(" ");
+		var lastname = this.lastIndexOf(" ");	
+
+		result = "firstname:" + this.slice(0, firstname) + enter;
+		result += "mid-name:" + this.slice(firstname, lastname) + enter;
+		result += "lastname:" + this.slice(lastname) + enter;
+		return result;
+	}
+	<!-- var fullName = new String(); -->
+	<!-- fullName = "Nguyen Le Van A"; -->
+	<!-- document.write("Result():" + enter + fullName.splitName()); -->
+	function leftTrim(str){
+		str = str.replace(/^\s+/img, "");
+		return str;
+	}
+
+	function rightTrim(str){
+		str = str.replace(/\s+$/img, "");
+		return str;
+	}
+
+	function midTrim(str){
+		str = str.replace(/\s+/img, " ");
+		return str;
+	}
+	
+	function split(){
+		var fullName = new String();
+		fullName = document.getElementById("fullName").value;
+		fullName = leftTrim(fullName);
+		fullName = rightTrim(fullName);
+		fullName = midTrim(fullName);
+		document.getElementById("result").innerHTML = fullName.splitName();
+	}
+</script>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.content(){
+		width: 400px;
+		height: 200px;
+		margin: 20px auto;
+		border: 2px solid #CCC; 
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.content input[type=button]{
+		padding: 2px 5px;
+	}
+	
+	.content #result0{
+		text-align: justify;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="content">
+		<input type="text" name="fullName" id="fullName">
+		<input type="button" value="split" onClick="split();">
+		<div id="result"></div>
+	</div>
+</body>
+</html> 

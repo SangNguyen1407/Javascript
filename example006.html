@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+	var str = "JavaScript is very easy, javaScript JAVASCRIPT";
+	var enter = "<br \>";
+	<!-- var patt = new RegExp("javaScript"); -->
+	var patt = /javaScript/ig;
+	document.write(str.match(patt) + enter);
+	document.write("ignoreCase: " + patt.ignoreCase + enter);
+	document.write("multiline: " + patt.multiline + enter);
+	document.write("global: " + patt.global + enter);
+	document.write("src: " + patt.source + enter);
+	
+	document.write("exec: " + patt.exec(str) + enter);
+	document.write("test: " + patt.test(str) + enter);
+	
+</script>
+</script>
+</head>
+<body>
+
+</body>
+</html> 

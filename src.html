@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	
+	var myNumber = 5;
+	var myString = "Hello";
+	var myBoolean = true;
+	var myArray = [];
+	var myObject = {};
+	var myUndefined = undefined;
+	var myNull = null;
+	document.write(myNumber + " : " + typeof myNumber + "<br />");
+	document.write(myString + " : " + typeof myString + "<br />");
+	document.write(myBoolean + " : " + typeof myBoolean + "<br />");
+	if (myArray instanceof Array){
+		document.write(myArray + " : " + "array" + "<br />");
+	}
+	if (myObject instanceof Object){
+		document.write(myObject + " : " + "Object" + "<br />");
+	}
+	document.write(myUndefined + " : " + typeof myUndefined + "<br />");
+	document.write(myNull + " : " + typeof myNull + "<br />");
+	
+	function show_message(user){
+		document.write("xin chao " + user);
+	}
+	
+	show_message(myString);
+	
+	var myNumber1 = new Number(12);
+	var enter = "<br \>";
+	document.write("Value: " + myNumber1 + enter);
+	document.write("Type: " + typeof myNumber1 + enter);
+	document.write("Constructor: " + myNumber1.constructor + enter);
+	
+	document.write("myNumber/myString " + myNumber/myString + enter);
+</script>
+
+</head>
+<body>
+	<a href="#" onClick="show_message('Nguyen Van A');">Xin chao </a>
+</body>
+</html> 

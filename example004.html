@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	var imgList = new Array();
+	imgList[0] = "images/001.jpg";
+	imgList[1] = "images/002.jpg";
+	imgList[2] = "images/003.jpg";
+	imgList[3] = "images/004.jpg";
+	
+	document.write(Math.floor(Math.random()*imgList.length));
+	
+	function showImage(){
+		var index = Math.floor(Math.random()*imgList.length);
+		var result = '<img src="' + 'images/00' + index + '.jpg">';
+		document.getElementById("image").innerHTML = result;
+	}
+</script>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.content{
+		margin: 10px auto; 
+		text-align: center;
+		width: 600px;
+		height:400px;
+	}
+	
+	.content input[type=button]{
+		padding: 3px 3px;
+		margin: 10px;
+	}
+	
+	.content #image{
+		border: 2px solid #999;
+		padding: 10px;
+		display: inline-block;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="content">
+		<input type="button" value="random image" onClick="showImage();" />
+		<div id="image">
+			<img src="./images/001.JPG">
+		</div>
+	</div>
+</body>
+</html> 
